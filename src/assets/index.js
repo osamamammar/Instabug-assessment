@@ -1,0 +1,9 @@
+export { ReactComponent as bugReporting } from "./images/bug-reporting.svg";
+export { ReactComponent as asanaCompany } from "./images/asana-company.svg";
+export { ReactComponent as buzzfeedCompany } from "./images/buzzfeed-company.svg";
+export { ReactComponent as housePartyCompany } from "./images/houseParty-company.svg";
+export { ReactComponent as lyftCompany } from "./images/lyft-company.svg";
+export { ReactComponent as oneplusCompany } from "./images/oneplus-company.svg";
+export { ReactComponent as microsoftIcon } from "./images/microsoft-icon.svg";
+export { ReactComponent as googleIcon } from "./images/google-icon.svg";
+export { ReactComponent as githubIcon } from "./images/github-icon.svg";
