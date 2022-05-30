@@ -1,0 +1,7 @@
+@mixin anchorBtn($color, $background-color, $background-color-hover) {
+  color: $color;
+  background-color: $background-color;
+  &:hover {
+    background-color: $background-color-hover;
+  }
+}
