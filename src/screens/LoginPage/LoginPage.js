@@ -1,13 +1,14 @@
 import React from "react";
 import { BugReporting } from "../../assets";
 
-import { LoginForm } from "../../components";
+import { Header, LoginForm } from "../../components";
 
 import "./LoginPage.scss";
 
 const LoginPage = () => {
   return (
     <>
+      <Header />
       <main className="main-container">
         <section className="section-left">
           <BugReporting></BugReporting>
