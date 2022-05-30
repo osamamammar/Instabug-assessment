@@ -1,0 +1,30 @@
+@import "../../sass/abstracts/variables";
+@import "../../sass/abstracts/mixins";
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  @include small {
+    grid-template-columns: 1fr;
+  }
+
+  .section-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-color-secondary;
+    padding-inline: 15px;
+    padding-block: 15px;
+    @include small {
+      display: none;
+    }
+  }
+  .section-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

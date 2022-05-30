@@ -1,7 +1,41 @@
-@mixin anchorBtn($color, $background-color, $background-color-hover) {
+@mixin anchorBtn($color, $background-color, $border-color) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: $color;
+  padding-inline: 15px;
+  padding-block: 8px;
+  min-width: 100%;
+  border-radius: 4px;
+  user-select: none;
+  border: 1px solid $border-color;
+  background-color: $background-color;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@mixin button(
+  $color,
+  $background-color,
+  $border-color,
+  $background-color-hover
+) {
+  color: $color;
+  padding-inline: 15px;
+  padding-block: 8px;
+  min-width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid $border-color;
   background-color: $background-color;
   &:hover {
     background-color: $background-color-hover;
+  }
+}
+
+@mixin small {
+  @media (max-width: 1000px) {
+    @content;
   }
 }
