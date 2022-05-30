@@ -17,6 +17,13 @@
     background-color: $background-color-secondary;
     padding-inline: 15px;
     padding-block: 15px;
+    .img-caption {
+      color: #ffffff;
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+      margin-block-start: 40px;
+    }
     @include small {
       display: none;
     }

@@ -1,0 +1,26 @@
+@import "../../sass/abstracts/variables";
+
+.notfound-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 10px;
+  padding-block: 10px;
+  height: 100vh;
+  .img-section {
+    margin-block-end: 50px;
+  }
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    .content-section__title {
+      color: #002276;
+    }
+    .content-section__description {
+      color: #1650b6;
+    }
+  }
+}
