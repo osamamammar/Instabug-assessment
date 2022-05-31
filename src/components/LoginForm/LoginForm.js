@@ -11,15 +11,12 @@ const LoginForm = () => {
   const [formValues, setFormValues] = useState({ email: "", password: "" });
   const [errorValidate, setErrorValidate] = useState({});
   const [Alert, setAlert] = useState("");
-  const [focused, setFocused] = useState(false);
+  const [focusedEmail, setFocusedEmail] = useState(false);
+  const [focusedPassword, setFocusedPassword] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
-  };
-
-  const handleFocus = () => {
-    setFocused(true);
   };
 
   const handleLogin = (e) => {
@@ -78,15 +75,17 @@ const LoginForm = () => {
             required
             value={formValues.email}
             onChange={handleChange}
-            onBlur={handleFocus}
-            focused={focused.toString()}
+            onBlur={() => setFocusedEmail(true)}
+            focused={focusedEmail.toString()}
             style={{
-              borderColor: focused && errorValidate.email ? "red" : "",
+              borderColor: focusedEmail && errorValidate.email ? "red" : "",
               boxShadow: "none",
             }}
           />
 
-          {focused && <p className="error-message">{errorValidate.email}</p>}
+          {focusedEmail && (
+            <p className="error-message">{errorValidate.email}</p>
+          )}
         </div>
 
         <div className="password-label-header">
@@ -106,14 +105,17 @@ const LoginForm = () => {
             required
             value={formValues.password}
             onChange={handleChange}
-            onBlur={handleFocus}
-            focused={focused.toString()}
+            onBlur={() => setFocusedPassword(true)}
+            focused={focusedPassword.toString()}
             style={{
-              borderColor: focused && errorValidate.password ? "red" : "",
+              borderColor:
+                focusedPassword && errorValidate.password ? "red" : "",
               boxShadow: "none",
             }}
           />
-          {focused && <p className="error-message">{errorValidate.password}</p>}
+          {focusedPassword && (
+            <p className="error-message">{errorValidate.password}</p>
+          )}
         </div>
 
         <button

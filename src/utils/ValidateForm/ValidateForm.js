@@ -13,11 +13,11 @@ export const validateForm = (values) => {
   }
   if (!values.password || values.password.length < 6) {
     errors.password = "Password must be 6 characters or more";
+  } else if (values.email.split("@")[0] === values.password) {
+    errors.password = "Password cannot be the same as email";
   } else if (!regexPassword.test(values.password)) {
     errors.password =
       "Password must contain at least one number and one uppercase";
-  } else if (values.email.split("@")[0] === values.password) {
-    errors.password = "Password cannot be the same as email";
   }
   return errors;
 };
