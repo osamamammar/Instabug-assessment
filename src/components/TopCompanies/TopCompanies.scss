@@ -1,0 +1,22 @@
+@import "../../sass/abstracts/variables";
+
+.top-companies-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  .top-companies-container__title {
+    text-align: center;
+    color: $font-color;
+    padding-inline: 8px;
+  }
+  .top-companies-container__logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding-inline: 15px;
+    margin-block-end: 15px;
+  }
+}

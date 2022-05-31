@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { InstabugLogo } from "../../assets";
+import {
+  GithubIcon,
+  GoogleIcon,
+  InstabugLogo,
+  MicrosoftIcon,
+} from "../../assets";
 import { UsersAccounts } from "../../Auth";
 import { regexEmail, regexPassword, validateForm } from "../../utils";
 import MessageAlert from "../MessageAlert/MessageAlert";
@@ -46,17 +51,45 @@ const LoginForm = () => {
       </header>
 
       <form className="form-container" noValidate>
-        <div className="anchors-container">
-          <Link className="google" to={"/"}>
-            Google
-          </Link>
-          <Link className="github" to={"/"}>
-            GitHub
-          </Link>
-          <Link className="microsoft" to={"/"}>
-            Microsoft
-          </Link>
-        </div>
+        <ul className="anchors-container">
+          <li>
+            <Link className="google" to={"/"}>
+              <img
+                className="google-img"
+                src={GoogleIcon}
+                alt="google-icon"
+                width={30}
+                height={30}
+              />
+              Google
+            </Link>
+          </li>
+
+          <li>
+            <Link className="github" to={"/"}>
+              <img
+                className="github-img"
+                src={GithubIcon}
+                alt="github-icon"
+                width={24}
+                height={24}
+              />
+              GitHub
+            </Link>
+          </li>
+          <li>
+            <Link className="microsoft" to={"/"}>
+              <img
+                className="microsoft-img"
+                src={MicrosoftIcon}
+                alt="microsoft-icon"
+                width={20}
+                height={20}
+              />
+              Microsoft
+            </Link>
+          </li>
+        </ul>
 
         <div className="or-seperator">
           <span>OR</span>
@@ -142,7 +175,6 @@ const LoginForm = () => {
           </Link>
         </div>
       </form>
-      <div></div>
     </>
   );
 };
