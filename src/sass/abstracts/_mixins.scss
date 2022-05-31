@@ -21,11 +21,12 @@
   color: $color;
   padding-inline: 15px;
   padding-block: 8px;
-  min-width: 100%;
+  width: 100%;
   border-radius: 4px;
   cursor: pointer;
   border: 1px solid $border-color;
   background-color: $background-color;
+  transition: all 0.2s ease-in-out;
   &:hover {
     background-color: $background-color-hover;
   }

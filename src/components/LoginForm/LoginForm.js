@@ -26,11 +26,17 @@ const LoginForm = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    Object.values(UsersAccounts).forEach((value) =>
-      value.email === formValues.email && value.password === formValues.password
-        ? navigate("/welcome")
-        : setAlert("Your email and/or password are incorrect")
-    );
+    Object.values(UsersAccounts).forEach((value) => {
+      if (
+        value.email === formValues.email &&
+        value.password === formValues.password
+      ) {
+        localStorage.setItem("userInfo", JSON.stringify(formValues.email));
+        navigate("/welcome");
+      } else {
+        setAlert("Your email and/or password are incorrect");
+      }
+    });
   };
 
   useEffect(() => {
