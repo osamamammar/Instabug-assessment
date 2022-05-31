@@ -26,17 +26,16 @@ const LoginForm = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    Object.values(UsersAccounts).forEach((value) => {
-      if (
-        value.email === formValues.email &&
-        value.password === formValues.password
-      ) {
-        localStorage.setItem("userInfo", JSON.stringify(formValues.email));
-        navigate("/welcome");
-      } else {
-        setAlert("Your email and/or password are incorrect");
-      }
-    });
+    const { email, password } = formValues;
+    const userExist = UsersAccounts.find(
+      (value) => value.email === email && value.password === password
+    );
+    if (userExist) {
+      localStorage.setItem("userInfo", JSON.stringify(email));
+      navigate("/welcome");
+    } else {
+      setAlert("Your email and/or password are incorrect");
+    }
   };
 
   useEffect(() => {
@@ -97,7 +96,7 @@ const LoginForm = () => {
           </li>
         </ul>
 
-        <div className="or-seperator">
+        <div className="or-separator">
           <span>OR</span>
         </div>
 
@@ -108,7 +107,9 @@ const LoginForm = () => {
           <input
             type="email"
             placeholder="you@company.com"
-            className="email-input"
+            className={`email-input ${
+              focusedEmail && errorValidate.email ? "error-input" : ""
+            }`}
             name="email"
             id="email"
             required
@@ -116,10 +117,6 @@ const LoginForm = () => {
             onChange={handleChange}
             onBlur={() => setFocusedEmail(true)}
             focused={focusedEmail.toString()}
-            style={{
-              borderColor: focusedEmail && errorValidate.email ? "red" : "",
-              boxShadow: "none",
-            }}
           />
 
           {focusedEmail && (
@@ -140,17 +137,19 @@ const LoginForm = () => {
             placeholder="6+ Characters"
             name="password"
             id="password"
-            className="password-input"
+            className={`password-input ${
+              focusedPassword && errorValidate.password && "error-input"
+            }`}
             required
             value={formValues.password}
             onChange={handleChange}
             onBlur={() => setFocusedPassword(true)}
             focused={focusedPassword.toString()}
-            style={{
-              borderColor:
-                focusedPassword && errorValidate.password ? "red" : "",
-              boxShadow: "none",
-            }}
+            // style={{
+            //   borderColor:
+            //     focusedPassword && errorValidate.password ? "red" : "",
+            //   boxShadow: "none",
+            // }}
           />
           {focusedPassword && (
             <p className="error-message">{errorValidate.password}</p>

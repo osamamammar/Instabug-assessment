@@ -11,11 +11,13 @@
   padding-block-start: 10px;
   > h2 {
     font-size: clamp(22px, 2.8vw, 32px);
+    font-weight: 400;
   }
 }
 
 .form-container {
-  min-width: 60%;
+  width: 100%;
+  max-width: 420px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,7 +71,7 @@
   }
 }
 
-.or-seperator {
+.or-separator {
   width: 100%;
   > span {
     display: flex;
@@ -80,7 +82,7 @@
     &::after {
       content: "";
       flex-grow: 1;
-      border: 1px solid #dcdee3;
+      border: 0.5px solid #dcdee3;
     }
   }
   margin-block-end: 15px;
@@ -94,10 +96,19 @@
   align-items: flex-start;
   gap: 4px;
   margin-block-end: 15px;
+
   label,
   input {
     width: 100%;
     font-size: 14px;
+  }
+  input[type="password"] {
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+    }
   }
   input {
     border-radius: 4px;
@@ -109,6 +120,11 @@
       border-color: $color-hover-100;
       box-shadow: $input-box-shadow;
     }
+  }
+  .email-input.error-input,
+  .password-input.error-input {
+    border-color: #f44336;
+    box-shadow: none;
   }
 }
 
@@ -155,10 +171,10 @@
 form input::-webkit-validation-bubble-message {
   display: none;
 }
-input:invalid[focused="true"] {
-  border-color: #f44336;
-  box-shadow: none;
-}
+// input:invalid[focused="true"] {
+//   border-color: #f44336;
+//   box-shadow: none;
+// }
 
 .error-message {
   color: $error-color;
