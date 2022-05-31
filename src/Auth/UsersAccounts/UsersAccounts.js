@@ -1,4 +1,4 @@
-export const LoginUsers = [
+export const UsersAccounts = [
   { email: "mohamed@instabug.com", password: "A12345678" },
   { email: "mohamed1@instabug.com", password: "A12345678" },
   { email: "mohamed2@instabug.com", password: "A12345678" },

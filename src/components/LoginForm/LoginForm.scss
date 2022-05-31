@@ -108,6 +108,9 @@
 .button-login {
   @include button(#fff, $link-color, transparent, $color-hover-100);
   margin-block-end: 8px;
+  &:disabled {
+    background-color: #ccc;
+  }
 }
 
 .footer-form {
@@ -124,4 +127,16 @@
       color: #445065;
     }
   }
+}
+form input::-webkit-validation-bubble-message {
+  display: none;
+}
+input:invalid[focused="true"] {
+  border-color: #f44336;
+  box-shadow: none;
+}
+
+.error-message {
+  color: $error-color;
+  font-size: 12px;
 }

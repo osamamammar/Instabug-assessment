@@ -65,7 +65,6 @@ const Carousel = () => {
       interval = setInterval(() => {
         const currentDot = document.querySelector(".carousel__dot.is-selected");
         const nextDot = currentDot.nextElementSibling;
-        console.log(nextDot, currentDot);
         if (nextDot) {
           nextDot.click();
         } else {
