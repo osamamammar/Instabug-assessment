@@ -12,7 +12,7 @@
 - [License](#license)
 
 ## About
->### Instabug frontend internship 2022. Try it [LIVE](https://instabug-login-2022.netlify.app/).
+>### Instabug frontend internship 2022. Try it [LIVE](https://instabug-demo.netlify.app/).
 
 
 ### Built with
