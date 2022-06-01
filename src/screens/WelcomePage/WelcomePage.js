@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { InstabugLogo } from "../../assets";
 import { Footer, Header } from "../../components";
 import "./WelcomePage.scss";
 
@@ -20,9 +21,9 @@ const WelcomePage = () => {
       <Header />
       <main className="welcome-page-main" id="main-content">
         <section className="welcome-page-container">
+          <img src={InstabugLogo} alt="" width={80} height={50.1} />
           <h1>
-            Welcome,
-            <span className="user">{info}</span>
+            Welcome ✨<span className="user">{info}</span>
           </h1>
           <button className="logout-btn" onClick={handleBtn}>
             Logout
