@@ -2,16 +2,16 @@ import React from "react";
 
 const SliderContent = ({ activeIndex, sliderImages }) => {
   return (
-    <ul className="carousel__contents">
+    <div className="carousel__contents">
       {sliderImages.map((slide, index) => {
         return (
-          <li
+          <figure
             key={index}
             className={`carousel__slide ${
               index === activeIndex ? "carousel__slide--active" : "inactive"
             }`}
           >
-            <figure>
+            <>
               <img
                 src={slide.image}
                 alt="img"
@@ -20,11 +20,11 @@ const SliderContent = ({ activeIndex, sliderImages }) => {
                 loading="lazy"
               />
               <figcaption>{slide.caption}</figcaption>
-            </figure>
-          </li>
+            </>
+          </figure>
         );
       })}
-    </ul>
+    </div>
   );
 };
 

@@ -1,15 +1,7 @@
 @import "../../sass/abstracts/mixins";
 
 .carousel__contents {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 100%;
   .carousel__slide {
-    position: absolute;
-    width: inherit;
-    height: inherit;
     animation: fadeIn 1s ease-in-out;
     @include keyframes-animation(fadeIn) {
       from {
@@ -19,40 +11,36 @@
         opacity: 1;
       }
     }
-    figure {
-      color: #ffffff;
-      width: 100%;
-      text-align: center;
-      font-size: 32px;
-      margin-block-end: 25px;
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-      justify-content: center;
-      align-items: center;
-    }
-    &.carousel__slide--active {
-      display: inline-block;
-    }
     &.inactive {
       display: none;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    color: #ffffff;
+    font-size: 32px;
+    img {
+      margin: auto;
+    }
+    figcaption {
+      text-align: center;
     }
   }
 }
 
 .carousel__dots {
-  width: 100%;
   z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  position: absolute;
-  top: 82%;
   .carousel__dot {
+    width: 100%;
     transition: all 0.5s ease-in-out;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: transparent;
     border: 1px solid #ffffff;

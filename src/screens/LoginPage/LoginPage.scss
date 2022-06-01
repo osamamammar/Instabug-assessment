@@ -21,6 +21,7 @@
     justify-content: center;
     align-items: center;
     background-color: $background-color-secondary;
+    gap: 20px;
     @include small {
       display: none;
     }
