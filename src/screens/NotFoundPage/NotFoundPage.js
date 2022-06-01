@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NotFoundLogo } from "../../assets";
 import { Footer, Header } from "../../components";
 import "./NotFoundPage.scss";
 
 const NotFoundPage = () => {
+  useEffect(() => {
+    document.title = "NotFound | Instabug";
+  }, []);
   return (
     <>
       <Header />

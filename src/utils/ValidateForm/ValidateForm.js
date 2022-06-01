@@ -2,7 +2,7 @@
 export const regexEmail =
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-// at least one number, and one uppercase letter
+// regex password validation at least one number, and one uppercase letter
 export const regexPassword = /^(?=.*\d)(?=.*[A-Z]).{6,}$/;
 
 export const validateForm = (values) => {

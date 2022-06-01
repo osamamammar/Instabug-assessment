@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Carousel,
   Footer,
@@ -10,6 +10,10 @@ import {
 import "./LoginPage.scss";
 
 const LoginPage = () => {
+  useEffect(() => {
+    document.title = "Login | Instabug";
+  }, []);
+
   return (
     <>
       <Header />

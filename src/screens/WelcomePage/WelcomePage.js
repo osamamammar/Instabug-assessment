@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer, Header } from "../../components";
 import "./WelcomePage.scss";
@@ -12,6 +12,9 @@ const WelcomePage = () => {
     localStorage.removeItem("userInfo");
     navigate("/login");
   };
+  useEffect(() => {
+    document.title = "Welcome | Instabug";
+  }, []);
   return (
     <>
       <Header />
