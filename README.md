@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# instabug-assessment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![osama_banner](https://user-images.githubusercontent.com/42181138/171488781-4933ffeb-4acc-478e-992d-f1398092efc8.jpg)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Table of Contents
+- [About the Project](#about)
+  - [Built with](#built-with)
+- [Getting Started](#getting-started)
+- [Screenshots](#screenshots)
 
-### `npm start`
+## About
+>### Instabug frontend internship 2022. Try it [LIVE](https://instabug-login-2022.netlify.app/).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Built with
+- [React JS](https://reactjs.org/)
+- [SASS](https://sass-lang.com/)
+- [Cypress](https://www.cypress.io/)
 
-### `npm test`
+## Getting Started
+```
+$ npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Run your end-to-end tests
+```
+$ npm run cypress:open
+```
 
-### `npm run build`
+### Compiles and minifies for production
+```
+$ npm run build
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Screenshots
+<h2 align="left">Login Page</h2>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![screencapture-instabug-demo-netlify-app-login-2022-06-01-21_40_24](https://user-images.githubusercontent.com/42181138/171488679-373305e5-c794-49c8-acbe-462464b202a1.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![screencapture-instabug-demo-netlify-app-login-2022-06-01-21_14_17](https://user-images.githubusercontent.com/42181138/171487458-6b881c88-1cd4-44aa-b504-478ee5e31a28.png)
+![screencapture-instabug-demo-netlify-app-login-2022-06-01-21_20_35](https://user-images.githubusercontent.com/42181138/171487467-e30e8dbf-d468-4f51-b5ee-54209fe4474e.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![screencapture-instabug-demo-netlify-app-login-2022-06-01-21_14_41](https://user-images.githubusercontent.com/42181138/171487490-a525e486-5729-419a-8cd2-063a98aa1b82.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![screencapture-instabug-demo-netlify-app-login-2022-06-01-21_23_41](https://user-images.githubusercontent.com/42181138/171487499-95c4b162-3e1d-4099-97c0-3c6127faeef1.png)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+<h2 align="left">Welcome Page</h2>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![welcome_page](https://user-images.githubusercontent.com/42181138/171487570-e9623422-44b0-4a56-9d28-9501088fe244.png)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<h2 align="left">404 Page</h2>
 
-### Making a Progressive Web App
+![screencapture-instabug-demo-netlify-app-404-2022-06-01-21_17_22](https://user-images.githubusercontent.com/42181138/171487588-bce1768f-9a62-4b3f-b243-51df92a111e4.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
