@@ -1,0 +1,42 @@
+@import "../../sass/abstracts/mixins";
+@import "../../sass/abstracts/variables";
+
+.anchors-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-block-end: 15px;
+  > li {
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    .google,
+    .github,
+    .microsoft {
+      border-radius: 3px;
+      > span {
+        margin: auto;
+      }
+    }
+    .github .github-img,
+    .microsoft .microsoft-img {
+      margin-inline-start: 10px;
+    }
+    .google {
+      @include anchorBtn(#fff, #4285f4, transparent);
+      .google-img {
+        border-radius: 3px;
+        background-color: $background-color-primary;
+      }
+    }
+    .github {
+      @include anchorBtn(#fff, #333, transparent);
+    }
+    .microsoft {
+      @include anchorBtn(#5e5e5e, #fff, #8c8c8c);
+    }
+  }
+}

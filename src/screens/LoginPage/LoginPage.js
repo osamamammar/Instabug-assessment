@@ -18,7 +18,10 @@ const LoginPage = () => {
     <>
       <Header />
       <main className="main-container" id="main-content">
-        <Carousel></Carousel>
+        <section className="section-left">
+          <Carousel></Carousel>
+        </section>
+
         <section className="section-right">
           <LoginForm></LoginForm>
           <TopCompanies></TopCompanies>

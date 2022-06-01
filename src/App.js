@@ -1,8 +1,8 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { LoginPage, NotFoundPage, WelcomePage } from "./screens";
-import "./sass/styles.scss";
 import { PublicRoute } from "./Routes/PublicRoute";
 import { PrivateRoute } from "./Routes/PrivateRoute";
+import "./sass/styles.scss";
 
 function App() {
   return (

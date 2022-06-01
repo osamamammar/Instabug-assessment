@@ -18,7 +18,7 @@ const WelcomePage = () => {
   return (
     <>
       <Header />
-      <main className="welcome-page-main">
+      <main className="welcome-page-main" id="main-content">
         <section className="welcome-page-container">
           <h1>
             Welcome,

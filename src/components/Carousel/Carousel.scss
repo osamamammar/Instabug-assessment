@@ -1,23 +1,15 @@
-// @keyframes fadeIn {
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
 @import "../../sass/abstracts/mixins";
 
-.carousel__container {
-  overflow: hidden;
-  .carousel__contents {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    height: 78%;
-    transition: all 0.5s ease-in-out;
+.carousel__contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  .carousel__slide {
+    position: absolute;
+    width: inherit;
+    height: inherit;
     animation: fadeIn 1s ease-in-out;
     @include keyframes-animation(fadeIn) {
       from {
@@ -27,41 +19,49 @@
         opacity: 1;
       }
     }
-    .carousel__slide {
-      position: absolute;
-      width: inherit;
-      height: inherit;
-      &:nth-child(2) {
-        left: 1000px;
-      }
-      &:nth-child(3) {
-        left: 2000px;
-      }
-      .carousel__slide-img {
-        width: 100%;
-      }
+    figure {
+      color: #ffffff;
+      width: 100%;
+      text-align: center;
+      font-size: 32px;
+      margin-block-end: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      justify-content: center;
+      align-items: center;
+    }
+    &.carousel__slide--active {
+      display: inline-block;
+    }
+    &.inactive {
+      display: none;
     }
   }
-  .carousel__dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    animation: fadeIn 1s ease-in-out;
-    .carousel__dot {
-      transition: all 0.5s ease-in-out;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: transparent;
-      border: 1px solid #ffffff;
-      cursor: pointer;
-      &:hover {
-        background-color: #ffffff;
-      }
-      &.is-selected {
-        background-color: #ffffff;
-      }
+}
+
+.carousel__dots {
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 82%;
+  .carousel__dot {
+    transition: all 0.5s ease-in-out;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    &:hover {
+      background-color: #ffffff;
     }
+  }
+  .carousel__dot--active {
+    background-color: #ffffff;
   }
 }

@@ -1,6 +1,6 @@
-export { ReactComponent as BugReporting } from "./images/bug-reporting.svg";
-export { ReactComponent as ProductOverview } from "./images/product-overview.svg";
-export { ReactComponent as ProductsCrashReporting } from "./images/products-crash-reporting.svg";
+export { default as slider_1 } from "./images/slider-1.svg";
+export { default as slider_2 } from "./images/slider-2.svg";
+export { default as slider_3 } from "./images/slider-3.svg";
 
 export { ReactComponent as AsanaCompany } from "./images/asana-company.svg";
 export { ReactComponent as BuzzfeedCompany } from "./images/buzzfeed-company.svg";

@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import {
-  GithubIcon,
-  GoogleIcon,
-  InstabugLogo,
-  MicrosoftIcon,
-} from "../../assets";
+import { InstabugLogo } from "../../assets";
 import { UsersAccounts } from "../../Auth";
 import { regexEmail, regexPassword, validateForm } from "../../utils";
+import LoginMethods from "../LoginMethods/LoginMethods";
 import MessageAlert from "../MessageAlert/MessageAlert";
 import "./LoginForm.scss";
 
@@ -30,6 +26,7 @@ const LoginForm = () => {
     const userExist = UsersAccounts.find(
       (value) => value.email === email && value.password === password
     );
+
     if (userExist) {
       localStorage.setItem("userInfo", JSON.stringify(email));
       navigate("/welcome");
@@ -55,53 +52,14 @@ const LoginForm = () => {
         <h2>Log in to Instabug</h2>
       </header>
 
-      <form className="form-container" noValidate>
-        <ul className="anchors-container">
-          <li>
-            <Link className="google" to={"/"}>
-              <img
-                className="google-img"
-                src={GoogleIcon}
-                alt="google-icon"
-                width={30}
-                height={30}
-              />
-              Google
-            </Link>
-          </li>
-
-          <li>
-            <Link className="github" to={"/"}>
-              <img
-                className="github-img"
-                src={GithubIcon}
-                alt="github-icon"
-                width={24}
-                height={24}
-              />
-              GitHub
-            </Link>
-          </li>
-          <li>
-            <Link className="microsoft" to={"/"}>
-              <img
-                className="microsoft-img"
-                src={MicrosoftIcon}
-                alt="microsoft-icon"
-                width={20}
-                height={20}
-              />
-              Microsoft
-            </Link>
-          </li>
-        </ul>
+      <form className="form-container">
+        <LoginMethods />
 
         <div className="or-separator">
           <span>OR</span>
         </div>
 
         {Alert && <MessageAlert>{Alert}</MessageAlert>}
-
         <div className="input-container">
           <label htmlFor="email">Work Email</label>
           <input
@@ -123,14 +81,12 @@ const LoginForm = () => {
             <p className="error-message">{errorValidate.email}</p>
           )}
         </div>
-
         <div className="password-label-header">
           <label htmlFor="password">Password</label>
           <Link to={"/"} className="forgot-password-link">
             Forgot password?
           </Link>
         </div>
-
         <div className="input-container">
           <input
             type="password"
@@ -145,17 +101,11 @@ const LoginForm = () => {
             onChange={handleChange}
             onBlur={() => setFocusedPassword(true)}
             focused={focusedPassword.toString()}
-            // style={{
-            //   borderColor:
-            //     focusedPassword && errorValidate.password ? "red" : "",
-            //   boxShadow: "none",
-            // }}
           />
           {focusedPassword && (
             <p className="error-message">{errorValidate.password}</p>
           )}
         </div>
-
         <button
           className="button-login"
           type="submit"
@@ -167,7 +117,6 @@ const LoginForm = () => {
         >
           Log in
         </button>
-
         <div className="footer-form">
           <p>
             Don't have an account?{" "}

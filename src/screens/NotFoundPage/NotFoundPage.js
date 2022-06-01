@@ -10,10 +10,10 @@ const NotFoundPage = () => {
   return (
     <>
       <Header />
-      <main className="main-wrapper">
+      <main className="main-wrapper" id="main-content">
         <section className="notfound-wrapper">
           <div className="img-section">
-            <img src={NotFoundLogo} alt="" />
+            <img src={NotFoundLogo} alt="404-notfound" />
           </div>
           <div className="content-section">
             <h2 className="content-section__title">404 - Page Not Found!</h2>

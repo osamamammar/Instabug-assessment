@@ -9,30 +9,27 @@
     grid-template-columns: 1fr;
   }
 
+  .section-left,
+  .section-right {
+    padding-inline: 14px;
+  }
+
   .section-left {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: $background-color-secondary;
-    padding-inline: 15px;
-    padding-block: 15px;
-
-    .img-caption {
-      color: #ffffff;
-      width: 100%;
-      text-align: center;
-      font-size: 18px;
-      margin-block-start: 40px;
-    }
     @include small {
       display: none;
     }
   }
+
   .section-right {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
 }
