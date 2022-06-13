@@ -5,10 +5,9 @@ const Dots = ({ activeIndex, onClick, sliderImages }) => {
     <ul className="carousel__dots">
       {sliderImages.map((slide, index) => {
         return (
-          <li>
+          <li key={index}>
             <button
               aria-label="navigate to next slide"
-              key={index}
               className={`carousel__dot ${
                 activeIndex === index ? "carousel__dot--active" : ""
               }`}

@@ -2,6 +2,13 @@
 
 .carousel__contents {
   .carousel__slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    color: #ffffff;
+    font-size: 32px;
     animation: fadeIn 1s ease-in-out;
     @include keyframes-animation(fadeIn) {
       from {
@@ -11,19 +18,15 @@
         opacity: 1;
       }
     }
+
     &.inactive {
       display: none;
     }
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    color: #ffffff;
-    font-size: 32px;
+
     img {
       margin: auto;
     }
+
     figcaption {
       text-align: center;
     }

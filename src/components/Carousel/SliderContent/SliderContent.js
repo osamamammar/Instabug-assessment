@@ -11,16 +11,13 @@ const SliderContent = ({ activeIndex, sliderImages }) => {
               index === activeIndex ? "carousel__slide--active" : "inactive"
             }`}
           >
-            <>
-              <img
-                src={slide.image}
-                alt="img"
-                width={slide.width}
-                height={slide.height}
-                loading="lazy"
-              />
-              <figcaption>{slide.caption}</figcaption>
-            </>
+            <img
+              src={slide.image}
+              alt="img"
+              width={slide.width}
+              height={slide.height}
+            />
+            <figcaption>{slide.caption}</figcaption>
           </figure>
         );
       })}
